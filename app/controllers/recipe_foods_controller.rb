@@ -1,10 +1,12 @@
 class RecipeFoodsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_recipe
   before_action :set_recipe_food, only: %i[edit update destroy]
+  before_action :check_recipe_ownership, only: %i[new create edit update destroy]
 
   def new
     @recipe_food = @recipe.recipe_foods.build
-    @foods = Food.all
+    @foods = current_user.foods
   end
 
   def create
@@ -12,7 +14,7 @@ class RecipeFoodsController < ApplicationController
     if @recipe_food.save
       redirect_to recipe_path(@recipe), notice: 'Ingredient was successfully added.'
     else
-      @foods = Food.all
+      @foods = current_user.foods
       render :new
     end
   end
@@ -47,5 +49,12 @@ class RecipeFoodsController < ApplicationController
 
   def recipe_food_params
     params.require(:recipe_food).permit(:food_id, :quantity)
+  end
+
+  def check_recipe_ownership
+    return if @recipe.user == current_user
+
+    redirect_to recipes_path,
+                alert: 'You are not authorized to perform this action.'
   end
 end
