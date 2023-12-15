@@ -3,7 +3,7 @@ class RecipeFoodsController < ApplicationController
   before_action :set_recipe_food, only: %i[edit update destroy]
 
   def new
-    @recipe_food = @recipe.recipe_foods.build
+    @recipe_food = @recipe.recipe_foods.includes(:food).build
     @foods = Food.all
   end
 
