@@ -9,6 +9,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeInUp 0.8s ease-in-out;
 }
 
 .shopping-list-header > div {
@@ -27,7 +32,8 @@
 }
 
 .shopping-list-table thead {
-  background-color: #f0f0f0;
+  background-color: #E57373;
+  color: white;
 }
 
 .shopping-list-table th,
@@ -53,4 +59,15 @@
 
 .shopping-list-stats {
   padding-bottom: 30px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

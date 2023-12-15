@@ -139,6 +139,18 @@ rspec
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Francis Andoh**
+
+- GitHub: [@CobbyElsonfx](https://github.com/CobbyElsonfx)
+- LinkedIn: [@FrancisAndoh](https://www.linkedin.com/in/francis-andoh-133aa7245/)
+
+👤 **José Luis Berbesi Lopera**
+
+- GitHub: [José Luis Berbesi Lopera](https://twitter.com/imberbesi)
+- LinkedIn: [José Luis Berbesi Lopera](https://www.linkedin.com/in/jlberbesi/)
+
+
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
