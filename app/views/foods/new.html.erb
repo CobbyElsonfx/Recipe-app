@@ -6,7 +6,7 @@
 <div class="form">
 <%= form_with(model: @food, local: true) do |form| %>
   <%= form.label :name %>
-  <%= form.text_field :name %>
+  <%= form.text_field :name, id: 'food_name' %>
 
   <div>
     <%= form.label :measurement_unit %>
