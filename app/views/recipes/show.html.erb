@@ -1,0 +1,50 @@
+<head>
+  <title>Recipes</title>
+  <%= stylesheet_link_tag 'application', 'recipes_show' %>
+</head>
+
+<div class="recipe-details">
+  <h2 class="center-text"><%= @recipe.name %></h2>
+
+  <div class="recipe-info">
+    <div>
+      <p><strong>Preparation Time:</strong> <%= @recipe.preparation_time %></p>
+      <p><strong>Cooking Time:</strong> <%= @recipe.cooking_time %></p>
+      <p> <%= @recipe.description %></p>
+    </div>
+    <div class="btn-container">
+      <p>Public</p>
+      <div class="toggle-container">
+        <button id="public-toggle" class="toggle-button"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-actions">
+    <%= link_to "Generate Shopping List", generate_shopping_list_recipe_path(@recipe), class: "button", method: :post %>
+    <%= link_to "Add Ingredient", "#", class: "button" %>
+  </div>
+</div>
+
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipe.recipe_foods.each do |recipe_food| %>
+      <tr>
+        <td><%= recipe_food.food.name %></td>
+        <td><%= recipe_food.quantity %></td>
+        <td><%= recipe_food.food.price * recipe_food.quantity %></td>
+        <td><%= link_to "Modify" %> <%= link_to "Remove" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

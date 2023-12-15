@@ -1,0 +1,57 @@
+.center-text {
+  text-align: center;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-info {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.public-button {
+  align-self: flex-start;
+}
+
+.recipe-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.toggle-container {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: green;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggle-button {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border: solid 1px gray;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.btn-container p {
+  padding: 5px 15px;
+  margin: 0;
+  font-size: 20px;
+}

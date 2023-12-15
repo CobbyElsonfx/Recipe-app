@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Recipes</title>
+  <%= stylesheet_link_tag 'application', 'recipes_index' %>
+</head>
+<body>
+
+<% @recipes.each do |recipe| %>
+  <div class="main-card">
+    <div class="left-column">
+      <h2><%= link_to recipe.name, recipe %></h2>
+      <%= link_to "Remove", class: "remove-button" %>
+    </div>
+    <div class="right-column">
+      <p><%= recipe.description %></p>
+    </div>
+  </div>
+<% end %>
+
+</body>
+</html>
