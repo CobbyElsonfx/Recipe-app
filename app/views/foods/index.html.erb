@@ -7,7 +7,7 @@
 <body>
 
 <div class="btn-div">
-  <%= link_to "Add Food", "#", class: "button" %>
+  <%= link_to "Add Food", new_food_path, class: "button" %>
 </div>
 
 <table>
@@ -26,8 +26,9 @@
         <td><%= food.measurement_unit %></td>
         <td><%= food.price %></td>
         <td>
-          <%= link_to "Delete", "#", class: "delete-link" %>
-        </td>
+  <%= link_to "Delete", food_path(food), method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-link" %>
+</td>
+
       </tr>
     <% end %>
   </tbody>

@@ -1,0 +1,19 @@
+<h1>General Shopping List</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity Needed</th>
+      <th>Unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @foods_needed.each do |food_needed| %>
+      <tr>
+        <td><%= food_needed.name %></td>
+        <td><%= food_needed.quantity_needed %></td>
+        <td><%= food_needed.measurement_unit %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
