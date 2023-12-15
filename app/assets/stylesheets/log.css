@@ -70,7 +70,7 @@
   display: flex;
   flex-direction: column;
   width: 300px;
-  background-color: #ffffff; /* White background for the form */
+  background-color: #fff; /* White background for the form */
   border: 1px solid #ddd; /* Light border for a subtle separation */
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
