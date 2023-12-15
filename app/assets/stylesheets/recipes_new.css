@@ -1,0 +1,23 @@
+.text-center {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
+  padding: 5px;
+}
+
+.check {
+  margin-left: 5px;
+}

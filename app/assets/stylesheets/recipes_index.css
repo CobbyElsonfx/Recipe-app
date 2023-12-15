@@ -1,3 +1,8 @@
+.main-recipes {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-card {
   border: 1px solid #ddd;
   padding: 20px;
@@ -29,4 +34,14 @@
   padding: 8px 16px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.new-recipe-link {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+  width: 100px;
+  margin: 20px 50px;
+  align-self: flex-end;
 }

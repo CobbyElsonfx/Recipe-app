@@ -1,5 +1,9 @@
+<%= stylesheet_link_tag 'application', 'foods_new' %>
+
+<div class="main">
 <h2>Add New Food</h2>
 
+<div class="form">
 <%= form_with(model: @food, local: true) do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
@@ -18,3 +22,4 @@
     <%= form.submit 'Create Food', class: 'button' %>
   </div>
 <% end %>
+</div>

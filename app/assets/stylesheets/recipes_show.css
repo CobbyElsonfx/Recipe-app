@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.info {
+  display: flex;
+}
+
 .recipe-info {
   display: flex;
   justify-content: space-between;
@@ -48,10 +52,20 @@
 
 .btn-container {
   display: flex;
+  flex-direction: column;
 }
 
 .btn-container p {
   padding: 5px 15px;
   margin: 0;
   font-size: 20px;
+}
+
+.cbox {
+  display: flex;
+  padding: 5px;
+}
+
+.box {
+  margin-right: 5px;
 }
