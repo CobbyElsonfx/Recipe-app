@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "application", 'recipes_new' %>
+
+<div class='main'>
+<h1 class="text-center">New Recipe</h1>
+
+<div class="form">
+<%= form_with(model: @recipe, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.label :preparation_time %>
+  <%= form.number_field :preparation_time %>
+
+  <%= form.label :cooking_time %>
+  <%= form.number_field :cooking_time %>
+
+<div class="checkbox">
+  <%= form.label :public %>
+  <%= form.check_box :public, class: 'check' %>
+</div>
+
+  <%= form.submit "Create Recipe" %>
+<% end %>
+</div>
+</div>

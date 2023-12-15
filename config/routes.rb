@@ -10,12 +10,14 @@ Rails.application.routes.draw do
   get 'shopping_list', to: 'foods#shopping_list', as: 'shopping_list' 
 
   resources :foods, only: [:index, :new, :create, :destroy]
-  resources :users, only: [:show] 
-  
-  resources :recipes, only: [:index, :show] do
+  resources :users, only: [:show]
+
+  resources :recipes do
+    resources :recipe_foods, only: [:new, :create, :edit, :update, :destroy]
     member do
-      post 'generate_shopping_list'
       get 'generate_shopping_list'
+      get 'shopping_list', to: 'recipes#shopping_list'
+      patch 'toggle_public', to: 'recipes#toggle_public'
     end
   end
 

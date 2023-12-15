@@ -2,7 +2,7 @@
   <title>Recipes</title>
   <%= stylesheet_link_tag 'application', 'recipes_show' %>
 </head>
-
+>
 <div class="recipe-details">
   <h2 class="center-text"><%= @recipe.name %></h2>
 
@@ -10,19 +10,24 @@
     <div>
       <p><strong>Preparation Time:</strong> <%= @recipe.preparation_time %></p>
       <p><strong>Cooking Time:</strong> <%= @recipe.cooking_time %></p>
-      <p> <%= @recipe.description %></p>
+      <p><%= @recipe.description %></p>
     </div>
     <div class="btn-container">
-      <p>Public</p>
-      <div class="toggle-container">
-        <button id="public-toggle" class="toggle-button"></button>
-      </div>
+      <% if @recipe.user == current_user %>
+        <%= form_with(model: @recipe, url: toggle_public_recipe_path(@recipe), method: :patch) do |form| %>
+        <div class="cbox">
+          <%= form.check_box :public, class: 'box' %>
+          <%= form.label :public, 'Make Recipe Public' %>
+          </div>
+          <%= form.submit 'Update Visibility' %>
+        <% end %>
+      <% end %>
     </div>
-  </div>
+  </div>  
 
   <div class="recipe-actions">
-    <%= link_to "Generate Shopping List", generate_shopping_list_recipe_path(@recipe), class: "button", method: :post %>
-    <%= link_to "Add Ingredient", "#", class: "button" %>
+    <%= link_to 'Generate Shopping List', generate_shopping_list_recipe_path(@recipe), class: "button" %>
+    <%= link_to "Add Ingredient", new_recipe_recipe_food_path(@recipe), class: "button" %>
   </div>
 </div>
 
@@ -42,8 +47,11 @@
       <tr>
         <td><%= recipe_food.food.name %></td>
         <td><%= recipe_food.quantity %></td>
-        <td><%= recipe_food.food.price * recipe_food.quantity %></td>
-        <td><%= link_to "Modify" %> <%= link_to "Remove" %></td>
+        <td><%= number_to_currency(recipe_food.food.price * recipe_food.quantity) %></td>
+        <td>
+          <%= link_to "Modify", edit_recipe_recipe_food_path(@recipe, recipe_food) %> 
+          <%= link_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

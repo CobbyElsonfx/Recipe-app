@@ -4,18 +4,19 @@
   <%= stylesheet_link_tag 'application', 'recipes_index' %>
 </head>
 <body>
-
+  <div class="main-recipes">
+<%= link_to 'New Recipe', new_recipe_path, class: 'new-recipe-link' %>
 <% @recipes.each do |recipe| %>
   <div class="main-card">
     <div class="left-column">
       <h2><%= link_to recipe.name, recipe %></h2>
-      <%= link_to "Remove", class: "remove-button" %>
+      <%= button_to 'Remove', recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure?' }, class: 'remove-button' %>
     </div>
     <div class="right-column">
       <p><%= recipe.description %></p>
     </div>
   </div>
 <% end %>
-
+</div>
 </body>
 </html>
