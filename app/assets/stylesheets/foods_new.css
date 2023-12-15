@@ -3,10 +3,6 @@
 }
 
 .form {
-  line-height: 2.5;
-}
-
-.form {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -27,7 +23,7 @@ label {
 
 #food_name,
 select,
-number {
+.number {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;

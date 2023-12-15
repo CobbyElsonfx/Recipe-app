@@ -76,29 +76,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
 }
 
-.field {
-  margin-bottom: 15px;
-}
-
-.field label {
-  font-size: 16px;
-  color: #333; /* Dark text color for labels */
-}
-
-.field input {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.actions {
-  text-align: center;
-  margin-top: 15px;
-}
-
 .resend-btn {
   background-color: #4267b2; /* Facebook blue color */
   color: #fff; /* White text color for the button */
