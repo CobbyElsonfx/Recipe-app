@@ -16,6 +16,12 @@
   animation: fadeInUp 0.8s ease-in-out;
 }
 
+.center-text {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 45px;
+}
+
 .shopping-list-header > div {
   display: flex;
   gap: 10px;

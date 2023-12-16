@@ -1,46 +1,65 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  padding-top: 50px; 
+  min-height: 100vh; 
+}
+
+.h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px; 
 }
 
 .form {
+  width: 100%;
+  max-width: 400px;
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: auto;
+  margin-top: 20px; 
 }
 
 form {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
   display: block;
-  margin: 10px 0;
+  margin: 10px 0 5px 0;
   font-size: 16px;
   color: #2c3e50;
 }
 
 #food_name,
 select,
-.number {
+.number_field {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #95a5a6;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #bdc3c7;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
 }
 
 .button {
-  display: block;
   width: 100%;
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  text-decoration: none;
   background-color: #3498db;
   color: white;
   border: none;
@@ -51,4 +70,20 @@ select,
 
 .button:hover {
   background-color: #2980b9;
+}
+
+:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 3px #3498db;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 20px;
+  }
+
+  .form {
+    padding: 20px;
+  }
 }

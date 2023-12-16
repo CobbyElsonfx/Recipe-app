@@ -22,10 +22,10 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: recipe_app
+  database: recipe_app2
   pool: 5
-  username: postgres
-  password: 0558119187Andoh
+  username: luis
+  password: luis123
   host: localhost
 
   # The specified database role being used to connect to PostgreSQL.
@@ -60,9 +60,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: recipe_app_test
-  username: postgres
-  password: 0558119187Andoh
+  database: recipe_app2_test
+  username: luis
+  password: luis123
   host: localhost
 
 # As with config/credentials.yml, you never want to store sensitive information,
