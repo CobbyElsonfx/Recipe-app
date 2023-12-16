@@ -14,15 +14,15 @@ body {
 }
 
 .new-recipe-link {
-  display: block; 
+  display: block;
   margin-bottom: 20px;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
-  text-align: center; 
+  text-align: center;
 }
 
 .main-card {
@@ -30,16 +30,16 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   border-radius: 4px;
-  display: flex; 
+  display: flex;
   overflow: hidden;
 }
 
 .left-column {
   flex: 1;
-  padding: 20px; 
-  display: flex; 
+  padding: 20px;
+  display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .center-text {
@@ -50,17 +50,17 @@ body {
 
 .left-column h2 {
   font-size: 1.8em;
-  margin: 0; 
+  margin: 0;
 }
 
 .left-column h2 a {
   text-decoration: none;
   color: black;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 .left-column h2 a:hover {
-  color: #4CAF50; 
+  color: #4caf50;
 }
 
 .right-column {
@@ -68,7 +68,7 @@ body {
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .remove-button {
@@ -80,17 +80,17 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .remove-button:hover {
-  background-color: #d32f2f; 
+  background-color: #d32f2f;
 }
 
 p {
   color: #666;
   line-height: 1.5;
-  margin: 0; 
+  margin: 0;
 }
 
 .button {
