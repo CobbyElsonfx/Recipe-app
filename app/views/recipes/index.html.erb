@@ -5,7 +5,8 @@
 </head>
 <body>
   <div class="main-recipes">
-<%= link_to 'New Recipe', new_recipe_path, class: 'new-recipe-link' %>
+  <h2 class="center-text">Recipes</h2>
+<%= link_to 'New Recipe', new_recipe_path, class: 'button' %>
 <% @recipes.each do |recipe| %>
   <div class="main-card">
     <div class="left-column">

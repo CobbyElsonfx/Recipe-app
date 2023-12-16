@@ -1,15 +1,15 @@
 .navbar {
-  background-color: #007bff;
+  background-color: #2c3e50; /* Darker shade of blue */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 15px 20px; /* Increased padding for better spacing */
 }
 
 .navbar-brand {
-  color: white;
+  color: #ecf0f1; /* Light gray text color */
   text-decoration: none;
-  font-size: 25px;
+  font-size: 28px; /* Slightly larger font size for emphasis */
 }
 
 .navbar-ul {
@@ -18,8 +18,13 @@
 }
 
 .nav-link {
-  color: white;
+  color: #ecf0f1; /* Light gray text color */
   text-decoration: none;
-  font-size: 18px;
-  padding: 0 15px;
+  font-size: 20px; /* Increased font size for better readability */
+  padding: 0 20px; /* Increased padding for better spacing */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+  color: #3498db; /* Highlight color on hover */
 }

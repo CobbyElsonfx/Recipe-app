@@ -1,25 +1,28 @@
-<%= stylesheet_link_tag 'application', 'foods_new' %>
+<%= stylesheet_link_tag 'application', 'foods_new', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <div class="main">
-<h2>Add New Food</h2>
+  <h2>Add New Food</h2>
 
-<div class="form">
-<%= form_with(model: @food, local: true) do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name, id: 'food_name' %>
+  <div class="form">
+    <%= form_with(model: @food, local: true) do |form| %>
+      <div>
+        <%= form.label :name %>
+        <%= form.text_field :name, id: 'food_name' %>
+      </div>
 
-  <div>
-    <%= form.label :measurement_unit %>
-    <%= form.select :measurement_unit, ['grams', 'kilograms', 'units', 'liters', 'mililiters', 'pounds'] %>
+      <div>
+        <%= form.label :measurement_unit %>
+        <%= form.select :measurement_unit, ['grams', 'kilograms', 'units', 'liters', 'mililiters', 'pounds'], {}, { class: 'number_field' } %>
+      </div>
+
+      <div>
+        <%= form.label :price %>
+        <%= form.number_field :price, class: 'number_field' %>
+      </div>
+
+      <div>
+        <%= form.submit 'Create Food', class: 'button' %>
+      </div>
+    <% end %>
   </div>
-
-  <div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
-
-  <div>
-    <%= form.submit 'Create Food', class: 'button' %>
-  </div>
-<% end %>
 </div>
