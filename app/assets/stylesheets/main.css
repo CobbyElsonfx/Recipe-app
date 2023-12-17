@@ -1,0 +1,19 @@
+.log-bar {
+  padding: 5px 35px;
+  background-color: #000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 15px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foods</title>
+  <%= stylesheet_link_tag 'application', 'foods_index' %>
+</head>
+<body>
+<h2 class="center-text">Foods</h2>
+<div class="btn-div">
+  <%= link_to "Add Food", new_food_path, class: "button" %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Measurement Unit</th>
+      <th>Unit Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @foods.each do |food| %>
+  <tr>
+    <td><%= food.name %></td>
+    <td><%= food.measurement_unit %></td>
+    <td><%= food.price %></td>
+    <td>
+      <%= form_with url: food_path(food), method: :delete do |form| %>
+  <%= form.submit 'Delete', data: { confirm: 'Are you sure?' } %>
+<% end %>
+    </td>
+  </tr>
+<% end %>
+
+  </tbody>
+</table>
+
+</body>
+</html>

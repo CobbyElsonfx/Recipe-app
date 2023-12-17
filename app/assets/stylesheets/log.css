@@ -1,0 +1,90 @@
+/* Add this to your 'log.scss' file or any other stylesheet you're using */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #fff; /* White background for the form */
+  border: 1px solid #ddd; /* Light border for a subtle separation */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  font-size: 16px;
+  color: #333; /* Dark text color for labels */
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.log-btn {
+  background-color: #4267b2; /* Facebook blue color */
+  color: #fff; /* White text color for the button */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.log-btn:hover {
+  background-color: #3a5795; /* Darker blue on hover */
+}
+
+/* Add this to your 'log.scss' file or any other stylesheet you're using */
+
+.resend-confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.resend-confirmation-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #fff; /* White background for the form */
+  border: 1px solid #ddd; /* Light border for a subtle separation */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+}
+
+.resend-btn {
+  background-color: #4267b2; /* Facebook blue color */
+  color: #fff; /* White text color for the button */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.resend-btn:hover {
+  background-color: #3a5795; /* Darker blue on hover */
+}

@@ -1,0 +1,26 @@
+<head>
+  <title>Public Recipes</title>
+  <%= stylesheet_link_tag 'application', 'public_recipes_index' %>
+</head>
+
+<div class="center-text">
+  <h2>Public Recipes</h2>
+
+  <div class="recipe-container">
+    <% @public_recipes.each do |recipe| %>
+      <% if recipe.public? %>
+        <div class="recipe-box">
+          <div class="left-content">
+            <h3><%= link_to recipe.name, recipe %></h3>
+            <p><strong>By:</strong> <%= recipe.user.name %></p>
+          </div>
+          <div class="right-content">
+            <p><strong>Total Food Items:</strong> <%= recipe.foods.count %></p>
+            <p><strong>Total Price:</strong> <%= calculate_total_price_from_recipe_foods(recipe.recipe_foods) %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
